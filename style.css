@@ -11,9 +11,10 @@
 body {
     background: radial-gradient(circle at 50%, #a537fd, transparent), #639;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 15%;
     justify-content: center;
     overflow: hidden;
+    font-family: 'Indie Flower', cursive;
 }
 .bojack {
     height: 300px;
@@ -22,6 +23,7 @@ body {
     position: relative;
     transition: transform 0.25s ease;
 }
+
 @media (min-width: 768px) and (min-height: 550px) {
     .bojack {
         transform: scale(1.75);
@@ -399,6 +401,35 @@ body {
     background: #000;
     transform: rotate(19deg);
 }
+.bojack__eye-signs-left {
+    height: 30px;
+    width: 30px;
+    top: 101px;
+    left: 99px;
+    border: 5px double #000;
+    border-radius: 100%;
+    z-index: 100;
+
+    transform-origin: bottom left;
+    transform: rotate(0deg);
+    clip-path: polygon(5px 20px, 21px 24px, 22px 26px, 7px 30px);
+    -webkit-clip-path: polygon(5px 20px, 21px 24px, 22px 26px, 7px 30px);
+}
+
+.bojack__eye-signs-right {
+    height: 30px;
+    width: 30px;
+    top: 103px;
+    left: 180px;
+    border: 5px double #000;
+    border-radius: 100%;
+    z-index: 100;
+
+    transform-origin: bottom left;
+    transform: rotate(-21deg);
+    clip-path: polygon(5px 20px, 21px 24px, 22px 26px, 7px 30px);
+    -webkit-clip-path: polygon(5px 20px, 21px 24px, 22px 26px, 7px 30px);
+}
 .bojack__eye {
     background: #fff;
     border: 2px solid #000;
@@ -416,25 +447,9 @@ body {
     border-radius: 100%;
     height: 7px;
     width: 7px;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -43%);
-}
-.bojack__eye--left:after {
-    height: 30px;
-    width: 30px;
-    border: 5px double #000;
-    border-radius: 100%;
-    top: -3px;
-    left: -6px;
-    clip-path: polygon(13px 20px, 26px 17px, 30px 30px, 21px 27px, 11px 27px);
-    -webkit-clip-path: polygon(
-        13px 20px,
-        26px 17px,
-        30px 30px,
-        21px 27px,
-        11px 27px
-    );
 }
 .bojack__eye--right {
     height: 20px;
@@ -448,21 +463,9 @@ body {
     border-radius: 100%;
     height: 7px;
     width: 7px;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -43%);
-}
-.bojack__eye--right:after {
-    height: 30px;
-    width: 30px;
-    border: 5px double #000;
-    border-radius: 100%;
-    top: -6px;
-    left: -9px;
-    transform-origin: bottom left;
-    transform: rotate(4deg);
-    clip-path: polygon(5px 20px, 21px 24px, 22px 26px, 7px 30px);
-    -webkit-clip-path: polygon(5px 20px, 21px 24px, 22px 26px, 7px 30px);
 }
 .bojack__nose {
     top: 50%;
@@ -737,35 +740,63 @@ body {
 }
 
 .body {
-  background-color: #fff0f0;
-  color: #ff6e6e;
-  font-family: "Muli", sans-serif;
-  font-weight: 100;
-  margin: 0;
+    background-color: #fff0f0;
+    color: #ff6e6e;
+    font-family: 'Indie Flower';
+    font-weight: 100;
+    margin: 0;
 }
 
 .full-height {
-  height: 300px;
+    height: 300px;
 }
 
 .flex-center {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.25s ease;
 }
 
 .position-r {
-  position: relative;
+    position: relative;
 }
 
 .code {
-  border-right: 3px solid;
-  font-size: 55px;
-  padding: 0 10px 0 10px;
-  text-align: center;
+    border-right: 3px solid;
+    font-size: 55px;
+    padding: 0 10px 0 10px;
+    text-align: center;
 }
 
 .message {
-  font-size: 40px;
-  text-align: center;
+    font-size: 40px;
+    text-align: center;
+}
+
+.type-writer {
+    overflow: hidden;
+    border-right: 0.15em solid yellow;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3s steps(30, end), blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50%;
+    }
+}
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
 }
