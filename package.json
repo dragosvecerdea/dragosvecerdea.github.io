@@ -48,7 +48,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && npx gh-pages -d public -b master",
+    "deploy": "gatsby build --prefix-paths && npx gh-pages -d public -b deploy",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

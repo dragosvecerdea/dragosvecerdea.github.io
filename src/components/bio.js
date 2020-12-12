@@ -26,6 +26,7 @@ const Bio = () => {
             summary
           }
           social {
+            linkedin
             twitter
           }
         }
@@ -36,6 +37,7 @@ const Bio = () => {
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
+  console.log(social)
 
   const avatar = data?.avatar?.childImageSharp?.fixed
 
@@ -55,8 +57,21 @@ const Bio = () => {
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+          <a href={social.linkedin}>
+            <img
+              height={20}
+              style={{marginLeft: '4px', verticalAlign: 'sub'}}
+              alt="Linkedin"
+              src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"
+            />
+          </a>
+          <a href={social.twitter}>
+            <img
+              height={20}
+              style={{marginLeft: '4px', verticalAlign: 'sub'}}
+              alt="Twitter"
+              src="https://img.shields.io/badge/TWITTER%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"
+            />
           </a>
         </p>
       )}

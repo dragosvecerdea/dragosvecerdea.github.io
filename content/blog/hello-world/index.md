@@ -10,7 +10,6 @@ I'm sure I'll write a lot more interesting things in the future.
 
 You can also write code blocks here!
 
-
 | Number | Title                                    | Year |
 | :----- | :--------------------------------------- | ---: |
 | 1      | Harry Potter and the Philosopher’s Stone | 2001 |
