@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Dragos's Gatsby Blog`,
     author: {
       name: `Dragos Vecerdea`,
       summary: `who lives in Bucharest and studies Computer Science at TU Delft`,
@@ -8,7 +8,8 @@ module.exports = {
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `VecerdeaPaul`,
+      linkedin: `https://www.linkedin.com/in/dragos-paul-vecerdea/`,
+      twitter: `https://twitter.com/VecerdeaPaul`,
     },
   },
   plugins: [
