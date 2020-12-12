@@ -60,7 +60,7 @@ const Bio = () => {
           <a href={social.linkedin}>
             <img
               height={20}
-              style={{marginLeft: '4px', verticalAlign: 'sub'}}
+              style={{ marginLeft: "4px", verticalAlign: "sub" }}
               alt="Linkedin"
               src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"
             />
@@ -68,7 +68,7 @@ const Bio = () => {
           <a href={social.twitter}>
             <img
               height={20}
-              style={{marginLeft: '4px', verticalAlign: 'sub'}}
+              style={{ marginLeft: "4px", verticalAlign: "sub" }}
               alt="Twitter"
               src="https://img.shields.io/badge/TWITTER%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"
             />
